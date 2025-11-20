@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>indtast det viste navn her</displayName>
+  <description>indtast beskrivelsen her</description>
+  <resources>
+    <stringTable>
+      <string id="AllowTelemetry">Tillad telemetri</string>
+      <string id="AllowTelemetry_0">0 - Sikkerhed [Kun Enterprise]</string>
+      <string id="AllowTelemetry_1">1 - Obligatorisk</string>
+      <string id="AllowTelemetry_2">2 - Forbedret</string>
+      <string id="AllowTelemetry_3">3 - Valgfri</string>
+      <string id="AllowTelemetry_Explain">Ved at konfigurere denne indstilling i Windows 10 kan slutbrugere ikke vælge et højere niveau af telemetrisamlinger end det niveau, du har angivet for organisationen. Denne begrænsning gælder kun for Windows-operativsystemet og- apps, der leveres sammen med Windows, og gælder ikke for tredjepartsprogrammer, der kører på Windows 10.
+
+Diagnosticeringsdata kategoriseres i fire niveauer som følger:
+  - 0 (Sikkerhed). Oplysninger, der er nødvendige for at hjælpe med at beskytte Windows, Windows Server og System Center, herunder data om indstillingerne for komponenten Tilsluttede brugeroplevelser og telemetri, Værktøj til fjernelse af skadelig software og Windows Defender.
+  - 1 (Påkrævet). Grundlæggende enhedsoplysninger, herunder: kvalitetsrelaterede data, appkompatibilitet og data fra sikkerhedsniveauet.
+  - 2 (Udvidet). Yderligere indsigt, herunder: hvordan Windows, Windows Server, System Center og apps bruges, hvordan de fungerer, avancerede overvågningsdata og data fra både det udvidede niveau og sikkerhedsniveauet.
+  - 3 (Valgfri). Alle de data, der er nødvendige for at identificere og hjælpe med at løse problemer, plus data fra niveauerne Sikkerhed, Påkrævet og Udvidet.
+
+De indstillinger, der er tilgængelige for brugere i appen Indstillinger, ændres ved at konfigurere denne indstilling, og selvom de ikke er angivet, kan de påvirkes af andre gruppepolitikindstillinger. Bemærk, at hvis denne politik er konfigureret til at tillade en telemetriindstilling af Sikkerhed eller Grundlæggende, kan slutbrugere ikke vælge et højere niveau.
+      </string>
+
+      <string id="TelemetryProxy">Konfigurer Tilsluttede brugeroplevelser og telemetri</string>
+      <string id="TelemetryProxy_Explain">Med denne politikindstilling kan du videresende anmodninger om Tilsluttet brugeroplevelse og telemetri til en proxyserver.
+
+Hvis du aktiverer politikindstillingen, kan du angive FQDN eller IP-adressen på destinationsenheden i din organisations netværk (og eventuelt et portnummer, hvis der er brug for det). Tilslutningen sker via en SSL-forbindelse (Secure Sockets Layer). Hvis den navngivne proxyanmodning ikke lykkes, eller hvis du deaktiverer eller undlader at konfigurere politikindstillingen, bliver data om Tilsluttet brugeroplevelse og telemetri sendt til Microsoft ved brug af standardproxykonfigurationen.
+
+Formatet af denne indstilling er &lt;server&gt;:&lt;port&gt; 
+      </string>
+
+      <string id="CommercialId">Konfigurer det kommercielle id</string>
+      <string id="CommercialId_Explain">Denne politikindstilling definerer det id, der bruges til entydigt at tilknytte denne enheds telemetridata som tilhørende en given organisation. Hvis din organisation deltager i et program, der kræver, at denne enhed skal identificeres som tilhørende din organisation, kan du bruge denne indstilling til at levere dette id. Værdien til denne indstilling leveres af Microsoft som en del af programmets onboardingproces. 
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Microsoft ikke kunne bruge dette id til at knytte denne computer og dens telemetridata til din organisation.
+      </string>
+
+      <string id="DisableEnterpriseAuthProxy">Konfigurer brugen af godkendt proxy for tjenesten Tilsluttet brugeroplevelse og telemetri</string>
+      <string id="DisableEnterpriseAuthProxy_1">Aktivér brug af godkendt proxy</string>
+      <string id="DisableEnterpriseAuthProxy_2">Deaktiver brug af godkendt proxy</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">Denne politikindstilling forhindrer tjenesten Tilsluttet brugeroplevelse og telemetri i automatisk at bruge en godkendt proxy til at sende data tilbage til Microsoft på Windows 10. Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger tjenesten Tilsluttet brugeroplevelse og telemetri automatisk en godkendt proxy til at sende data tilbage til Microsoft. Hvis du aktiverer denne politik, forhindres tjenesten Tilsluttet brugeroplevelse og telemetri i automatisk at bruge en godkendt proxy.</string>
+
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Begræns udvidede diagnosticeringsdata til det minimum, der kræves af Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Aktivér Windows Analytics-samling</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Deaktiver Windows Analytics-samling</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Denne politikindstilling vil kombineret med politikindstillingen Tillad telemetri give organisationer lov til at sende et bestemt sæt af diagnosticeringsdata til Microsoft til it-indsigt via Windows Analytics-tjenester.
+
+Du kan aktivere denne funktionalitet ved at fuldføre to trin:
+
+    1. Aktivér denne politikindstilling
+    2. Indstil Tillad telemetri til niveau 2 (Udvidet)
+
+Denne indstilling påvirker enheder, der er konfigurerer til at sende sikkerhedsdata eller påkrævede diagnosticeringsdata til Microsoft. 
+
+Når disse politikker er konfigureret, begrænses indsamling af diagnosticeringsdata til påkrævede diagnosticeringsdata og hændelser krævet af Desktop Analytics. Disse hændelser kan ses på https://go.microsoft.com/fwlink/?linkid=2116020.
+
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vil det niveau af diagnosticeringsdata, der sendes til Microsoft, være bestemt af politikindstillingen Tillad telemetri, hvis den er konfigureret (hvis du f.eks. aktiverer udvidede diagnosticeringsdata ved hjælp af politikindstillingen Tillad telemetri, men ikke konfigurerer denne politikindstilling, sender du de påkrævede hændelser for Windows Analytics samt alle yderligere diagnosticeringsdata på udvidet niveau til Microsoft).
+      </string>
+
+      <string id="AllowDeviceNameInDiagnosticData">Tillad, at enhedsnavnet sendes i diagnostiske Windows-data</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Denne politikindstilling tillader, at enhedsnavnet kan sendes til Microsoft som del af diagnostiske Windows-data.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bliver enhedsnavn ikke sendt til Microsoft som en del af diagnostiske Windows-data.
+      </string>
+
+      <string id="ConfigureTelemetryOptInSettingsUx">Konfigurer tilmeldingsindstillinger for telemetri i brugergrænsefladen.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Deaktiver tilmeldingsindstillinger for telemetri</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Aktivér tilmeldingsindstillinger for telemetri</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Denne politikindstilling bestemmer, om en slutbruger kan ændre telemetriniveauer i Indstillinger.
+
+Hvis du angiver denne politikindstilling til "Deaktiver tilvalgsindstillinger for telemetri", deaktiveres telemetriniveauer i Indstillinger, og slutbrugerne kan ikke ændre dem.
+
+Hvis du undlader at konfigurere denne politikindstilling, eller hvis du angiver den til "Aktivér tilvalgsindstillinger for telemetri", kan slutbrugerne ændre niveauet for enhedstelemetri i appen Indstillinger.
+
+Bemærk
+Hvis du vil angive en grænse for niveauet af diagnosticeringsdata, der sendes til Microsoft af din organisation, skal du bruge politikindstillingen Tillad telemetri.
+      </string>
+
+      <string id="ConfigureTelemetryOptInChangeNotification">Konfigurer ændringer i tilmeldingsmeddelelser for telemetri.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Deaktiver meddelelser om ændringer for telemetri</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Aktivér meddelelser om ændringer for telemetri</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
+          Denne politikindstilling kontrollerer, om en enhed viser meddelelser om telemetri niveauer til personer ved første logon, eller når der sker ændringer i indstillinger. 
+          Hvis du angiver denne politikindstilling til "Deaktiver meddelelser om telemetri ændringer", stopper meddelelser om telemetri niveau med at blive vist.
+          Hvis du angiver denne politikindstilling til "Aktivér meddelelser om telemetri ændringer" eller ikke konfigurerer denne politikindstilling, vises telemetri meddelelser ved første logon, og når der sker ændringer i indstillinger.
+      </string>
+
+      <string id="DisableDeviceDelete">Deaktiver sletning af diagnosticeringsdata </string>
+      <string id="DisableDeviceDelete_Explain">
+          Denne politikindstilling kontrollerer, om knappen Slet diagnosticeringsdata er aktiveret i siden Indstillinger for diagnosticering og feedback.
+          Hvis du aktiverer denne politikindstilling, deaktiveres knappen Slet diagnosticeringsdata på siden Indstillinger, hvilket forhindrer sletning af diagnosticeringsdata, der er indsamlet af Microsoft fra enheden. 
+          Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, aktiveres knappen Slet diagnosticeringsdata på siden Indstillinger, som gør det muligt for brugerne at slette alle diagnosedata, der er indsamlet af Microsoft fra den pågældende enhed.
+      </string>
+
+      <string id="DisableDiagnosticDataViewer">Deaktiver Diagnostisk Datafremviser. </string>
+      <string id="DisableDiagnosticDataViewer_Explain">
+          Denne politikindstilling kontrollerer, om brugere kan aktivere og starte Diagnostisk Datafremviser fra siden Indstillinger for diagnosticering og feedback.
+          Hvis du aktiverer denne politikindstilling, aktiveres Diagnostisk Datafremviser ikke på siden Indstillinger, og den forhindrer fremviseren i at vise diagnosticeringsdata, der er indsamlet af Microsoft, fra enheden.  
+          Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, aktiveres Diagnostisk Datafremviser på siden Indstillinger.
+      </string>
+
+      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurer slutpunkt for upload af diagnosticeringsdata for Desktop Analytics</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
+          Denne politik angiver slutpunktet for upload for denne enheds diagnosticeringsdata som en del af Desktop Analytics-programmet.
+          Hvis din organisation deltager i programmet og er blevet bedt om at konfigurere et brugerdefineret slutpunkt for upload, skal du bruge denne indstilling til at angive slutpunktet.
+          Værdien for denne indstilling vil blive angivet af Microsoft som del af programmets Onboarding-proces. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Tillad opdatering af overholdelsesbehandling</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+Denne politikindstilling, i kombination med Tillad telemetri og konfigurer det kommercielle id, gør det muligt for organisationer at konfigurere enheden, så Microsoft behandler de diagnostiske Windows-data, der indsamles fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+Sådan aktiverer du denne adfærd:
+    1. Aktiver denne politikindstilling
+    2. Tilslut en Azure Active Directory-konto til enheden
+    3. Indstil Tillad telemetri til værdi 1 - Påkrævet eller højere
+    4. Indstil indstillingen Konfigurer det kommercielle id for arbejdsområdet Update Compliance
+
+Når disse politikker er konfigureret, vil diagnostiske Windows-data, indsamlet fra enheden, være underlagt Microsoft-processorforpligtelser.
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vises enheder ikke i Update Compliance.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Tillad behandling af skrivebordsanalyse</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+Denne politikindstilling, i kombination med Tillad telemetri og konfigurer det kommercielle id, gør det muligt for organisationer at konfigurere enheden, så Microsoft er behandleren af de diagnostiske Windows-data, der indsamles fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+Sådan aktiverer du denne adfærd:
+    1. Aktiver denne politikindstilling
+    2. Tilslut en Azure Active Directory-konto til enheden
+    3. Indstil Tillad telemetri til værdi 1 - Påkrævet eller højere
+    4. Indstil indstillingen Konfigurer det kommercielle id for arbejdsområdet Desktop Analytics
+
+Når disse politikker er konfigureret, vil diagnostiske Windows-data, indsamlet fra enheden, være underlagt Microsoft-processorforpligtelser.
+Denne indstilling har ingen effekt på enheder, medmindre de er korrekt tilmeldt Desktop Analytics. Hvis du deaktiverer denne politikindstilling, vises enheder ikke i Desktop Analytics.
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Tillad behandling af WUfB-Sky</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+Denne politikindstilling konfigurerer en tilsluttet Azure Active Directory-enhed, så Microsoft er processoren af de diagnostiske Windows-data, der indsamles fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+Sådan aktiverer du denne adfærd:
+    1. Aktiver denne politikindstilling
+    2. Tilslut en Azure Active Directory-konto til enheden
+    3. Indstil Tillad telemetri til værdi 1 - Påkrævet eller højere
+
+Når disse politikker er konfigureret, vil diagnostiske Windows-data, indsamlet fra enheden, være underlagt Microsoft-processorforpligtelser.
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vil enheder, der er tilmeldt Windows Update til virksomheder-udrulningstjenesten, ikke kunne drage fordel af visse funktioner til udrulningstjenesten.
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Tillad erhvervsmæssig datapipeline</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+AllowCommercialDataPipeline konfigurerer en Azure Active Directory-forbundet enhed, så Microsoft er processoren af Windows-diagnosedata indsamlet fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+Sådan aktiverer du denne adfærd:
+    1. Aktiver denne politikindstilling
+    2. Tilslut en Azure Active Directory-konto til enheden
+
+Windows-diagnosedata indsamles, når politikindstillingen Tillad telemetri er indstillet til værdi 1 - Påkrævet eller højere. Konfiguration af denne indstilling ændrer ikke indsamlingsniveauet for Windows-diagnosedata, der er indstillet for enheden
+Hvis du deaktiverer eller ikke konfigurerer denne indstilling, vil Microsoft være kontrollerende for de diagnostiske Windows-data, der indsamles fra enheden og behandles i overensstemmelse med Microsofts erklæring om beskyttelse af personlige oplysninger på https://go.microsoft.com/fwlink/?LinkId=521839 medmindre du har aktiveret politikker som "Tillad opdatering af overholdelsesbehandling" eller "Tillad behandling af skrivebordsanalyse".
+Se dokumentationen på https://go.microsoft.com/fwlink/?linkid=2011107 for information om denne og andre politikker, der vil resultere i, at Microsoft behandler diagnostiske Windows-data.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Aktivér OneSettings-overvågning</string>
+      <string id="EnableOneSettingsAuditing_Explain">Denne politikindstilling styrer, om Windows skal registrere forsøg på at oprette forbindelse mellem OneSettings-tjenesten og EventLog.
+
+Hvis du aktiverer denne politik, vil Windows registrere forsøg på at oprette forbindelse mellem OneSettings-tjenesten og kanalen Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows ikke registrere forsøg på at oprette forbindelse mellem OneSettings-tjenesten og EventLog.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Deaktiver OneSettings-downloads</string>
+      <string id="DisableOneSettingsDownloads_Explain">Denne politikindstilling styrer, om Windows forsøger at oprette forbindelse med tjenesten OneSettings.
+
+Hvis du aktiverer denne politik, vil Windows ikke forsøge at oprette forbindelse med tjenesten OneSettings.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows regelmæssigt forsøge at oprette forbindelse med OneSettings-tjenesten for at hente konfigurationsindstillinger.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AllowTelemetry">
+        <dropdownList refId="AllowTelemetry" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="TelemetryProxy">
+        <textBox refId="TelemetryProxyName">
+          <label>Navn på proxyserver:</label>
+        </textBox>
+      </presentation>
+      <presentation id="CommercialID">
+        <textBox refId="CommercialIdValue">
+          <label>Kommercielt id:</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableEnterpriseAuthProxy">
+        <dropdownList refId="DisableEnterpriseAuthProxy" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="LimitEnhancedDiagnosticDataWindowsAnalytics">
+        <dropdownList refId="LimitEnhancedDiagnosticDataWindowsAnalytics" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInSettingsUx">
+        <dropdownList refId="ConfigureTelemetryOptInSettingsUx" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInChangeNotification">
+        <dropdownList refId="ConfigureTelemetryOptInChangeNotification" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureMicrosoft365UploadEndpoint">
+        <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
+          <label>Brugerdefineret slutpunkt for upload for Desktop Analytics:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

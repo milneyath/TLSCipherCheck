@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>tutaj wprowadź nazwę wyświetlaną</displayName>
+  <description>tutaj wprowadź opis</description>
+  <resources>
+    <stringTable>
+      <string id="AllowTelemetry">Zezwalaj na telemetrię</string>
+      <string id="AllowTelemetry_0">0 — zabezpieczenia [tylko przedsiębiorstwo]</string>
+      <string id="AllowTelemetry_1">1 — wymagane</string>
+      <string id="AllowTelemetry_2">2 — rozszerzone</string>
+      <string id="AllowTelemetry_3">3 — opcjonalne</string>
+      <string id="AllowTelemetry_Explain">Po skonfigurowaniu tego ustawienia w systemie Windows 10 użytkownicy końcowi nie będą mogli wybrać poziomu zbierania danych telemetrycznych wyższego niż poziom ustawiony dla organizacji. To ograniczenie dotyczy tylko systemu operacyjnego Windows oraz aplikacji wchodzących w skład systemu Windows. Nie dotyczy ono aplikacji innych firm uruchamianych w systemie Windows 10.
+
+Dane diagnostyczne są podzielone na cztery poziomy, tak jak opisano poniżej:
+  - 0 (Zabezpieczenia). Informacje potrzebne do zapewnienia bezpieczeństwa oprogramowania Windows, Windows Server i System Center, w tym dane dotyczące ustawień składnika Środowiska i telemetria połączonego użytkownika, narzędzia do usuwania złośliwego oprogramowania oraz usługi Windows Defender.
+  - 1 (Wymagane). Podstawowe informacje o urządzeniu, w tym dane związane z jakością i zgodnością aplikacji oraz dane z poziomu Zabezpieczenia.
+  - 2 (Rozszerzone). Dodatkowe szczegółowe dane, w tym dotyczące sposobu używania systemów Windows i Windows Server, programu System Center oraz aplikacji, a także ich wydajności, zaawansowane dane dotyczące niezawodności oraz dane z poziomów Wymagane i Zabezpieczenia.
+  - 3 (Opcjonalne). Wszystkie dane niezbędne do identyfikowania problemów i pomagania w ich rozwiązywaniu oraz dane z poziomów Zabezpieczenia, Wymagane i Rozszerzone.
+
+Skonfigurowanie tego ustawienia powoduje zmianę opcji dostępnych dla użytkowników w aplikacji Ustawienia. Nawet jeśli te opcje nie zostaną ustawione, ich wartości mogą być określane za pośrednictwem innych ustawień zasad grupy. Pamiętaj, że jeśli konfiguracja tego ustawienia będzie zezwalać na używanie ustawienia telemetrii o wartości Zabezpieczenia lub Podstawowe, użytkownicy końcowi nie będą mogli wybrać wyższego poziomu.
+      </string>
+
+      <string id="TelemetryProxy">Konfiguruj usługę Środowiska i telemetria połączonego użytkownika</string>
+      <string id="TelemetryProxy_Explain">To ustawienie zasad umożliwia przesyłanie dalej żądań dotyczących usługi Środowisko i telemetria połączonego użytkownika do serwera proxy.
+
+Jeśli to ustawienie zasad zostanie włączone, będzie można określić nazwę FQDN lub adres IP urządzenia docelowego w sieci organizacji (i opcjonalnie numer portu). Połączenie będzie nawiązywane za pośrednictwem protokołu SSL (Secure Sockets Layer). Jeśli nazwany serwer proxy ulegnie awarii lub jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, dane usługi Środowisko i telemetria połączonego użytkownika będą wysyłane do firmy Microsoft przy użyciu domyślnej konfiguracji serwera proxy.
+
+Format tego ustawienia: &lt;server&gt;:&lt;port&gt; 
+      </string>
+
+      <string id="CommercialId">Konfiguruj identyfikator komercyjny</string>
+      <string id="CommercialId_Explain">To ustawienie zasad definiuje identyfikator używany do unikatowego kojarzenia danych telemetrycznych urządzenia jako należących do danej organizacji. Jeśli Twoja organizacja uczestniczy w programie wymagającym zidentyfikowania tego urządzenia jako należącego do organizacji, użyj tego ustawienia w celu podania tego identyfikatora. Wartość tego ustawienia zostanie podana przez firmę Microsoft w ramach procesu dołączania do programu. 
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, firma Microsoft nie będzie mogła skojarzyć tej maszyny i jej danych telemetrycznych z organizacją za pomocą tego identyfikatora.
+      </string>
+
+      <string id="DisableEnterpriseAuthProxy">Konfiguruj użycie uwierzytelnionego serwera proxy na potrzeby usługi Środowisko i telemetria połączonego użytkownika</string>
+      <string id="DisableEnterpriseAuthProxy_1">Włącz użycie uwierzytelnionego serwera proxy</string>
+      <string id="DisableEnterpriseAuthProxy_2">Wyłącz użycie uwierzytelnionego serwera proxy</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">To ustawienie zasad blokuje usłudze Środowisko i telemetria połączonego użytkownika możliwość automatycznego używania uwierzytelnionego serwera proxy do wysyłania danych do firmy Microsoft w systemie Windows 10. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, usługa Środowisko i telemetria połączonego użytkownika będzie automatycznie wysyłać dane do firmy Microsoft przy użyciu uwierzytelnionego serwera proxy. Włączenie tego ustawienia zasad spowoduje zablokowanie automatycznego używania uwierzytelnionego serwera proxy przez usługę Środowisko i telemetria połączonego użytkownika.</string>
+
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Ogranicz rozszerzone dane diagnostyczne do minimum wymaganego przez usługę Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Włącz kolekcję usługi Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Wyłącz kolekcję usługi Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">To ustawienie zasad, w połączeniu z ustawieniem zasad Zezwalaj na telemetrię, umożliwia organizacjom wysyłanie do firmy Microsoft określonego zestawu danych diagnostycznych w celu analizy infrastruktury informatycznej za pośrednictwem usług Windows Analytics.
+
+Aby włączyć to zachowanie, należy wykonać dwa kroki:
+
+    1. Włącz to ustawienie zasad
+    2. Określ w ustawieniu Zezwalaj na telemetrię wartość Poziom 2 (rozszerzone)
+
+To ustawienie nie przynosi efektu na urządzeniach skonfigurowanych do wysyłania do firmy Microsoft danych diagnostycznych na poziomie Zabezpieczenia lub Wymagane. 
+
+Gdy skonfigurujesz te zasady, zbieranie danych diagnostycznych będzie ograniczone do wymaganych danych diagnostycznych i zdarzeń wymaganych przez usługę Desktop Analytics. Te zdarzenia można wyświetlić pod adresem https://go.microsoft.com/fwlink/?linkid=2116020.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, poziom danych diagnostycznych wysyłanych do firmy Microsoft będzie ustalany na podstawie ustawienia zasad Zezwalaj na telemetrię, o ile zostało ono skonfigurowane (np. jeśli włączysz rozszerzone dane diagnostyczne za pośrednictwem ustawienia zasad Zezwalaj na telemetrię, ale nie skonfigurujesz tego ustawienia zasad, do firmy Microsoft będą wysyłane wymagane zdarzenia dla usługi Windows Analytics oraz wszelkie dodatkowe dane diagnostyczne na poziomie Rozszerzone).
+      </string>
+
+      <string id="AllowDeviceNameInDiagnosticData">Zezwalaj na wysyłanie nazwy urządzenia w danych diagnostycznych systemu Windows</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Ta zasada zezwala na wysyłanie nazwy urządzenia do firmy Microsoft jako części danych diagnostycznych systemu Windows.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, nazwa urządzenia nie będzie wysyłana do firmy Microsoft jako części danych diagnostycznych systemu Windows.
+      </string>
+
+      <string id="ConfigureTelemetryOptInSettingsUx">Skonfiguruj interfejs użytkownika umożliwiający używanie telemetrii.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Wyłącz ustawienia używania telemetrii</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Włącz ustawienia używania telemetrii</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">To ustawienie zasad określa, czy użytkownik końcowy może zmieniać poziomy telemetrii w Ustawieniach.
+
+Jeśli określisz dla tego ustawienia zasad wartość "Wyłącz ustawienia używania telemetrii", poziomy telemetrii będą wyłączone w Ustawieniach, co uniemożliwi użytkownikom końcowym ich zmianę.
+
+Jeśli nie skonfigurujesz tego ustawienia zasad albo ustawisz dla niego wartość "Włącz ustawienia używania telemetrii", użytkownicy końcowi będą mogli zmieniać poziom telemetrii urządzenia w aplikacji Ustawienia.
+
+Uwaga:
+Aby ustawić limit poziomu danych diagnostycznych wysyłanych do firmy Microsoft przez Twoją organizację, użyj ustawienia zasad Zezwalaj na telemetrię.
+      </string>
+
+      <string id="ConfigureTelemetryOptInChangeNotification">Skonfiguruj powiadomienia o zmianie zakresu używania telemetrii.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Wyłącz powiadomienia o zmianie telemetrii</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Włącz powiadomienia o zmianie telemetrii</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
+          To ustawienie zasad określa, czy urządzenie pokazuje użytkownikom powiadomienia dotyczące poziomów telemetrii przy pierwszym logowaniu albo po wprowadzeniu zmian w Ustawieniach. 
+          Jeśli określisz dla tego ustawienia zasad wartość „Wyłącz powiadomienia o zmianie telemetrii”, powiadomienia o poziomach telemetrii przestaną być wyświetlane.
+          Jeśli określisz dla tego ustawienia zasad wartość „Włącz powiadomienia o zmianie telemetrii” albo go nie skonfigurujesz, powiadomienia o telemetrii będą wyświetlane przy pierwszym logowaniu oraz w przypadku ich zmiany w Ustawieniach.
+      </string>
+
+      <string id="DisableDeviceDelete">Wyłącz usuwanie danych diagnostycznych </string>
+      <string id="DisableDeviceDelete_Explain">
+          To ustawienie zasad określa, czy przycisk Usuń dane diagnostyczne jest włączony na stronie Ustawienia diagnostyki i opinii.
+          Jeśli włączysz to ustawienie zasad, przycisk Usuń dane diagnostyczne będzie wyłączony na stronie Ustawienia, co uniemożliwi usunięcie z urządzenia danych diagnostycznych zebranych przez firmę Microsoft. 
+          Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, przycisk Usuń dane diagnostyczne będzie włączony na stronie Ustawienia, co umożliwi użytkownikom wymazanie z urządzenia wszystkich danych diagnostycznych zebranych przez firmę Microsoft.
+      </string>
+
+      <string id="DisableDiagnosticDataViewer">Wyłącz Przeglądarkę danych diagnostycznych. </string>
+      <string id="DisableDiagnosticDataViewer_Explain">
+          To ustawienie zasad określa, czy użytkownicy mogą włączać i uruchamiać Przeglądarkę danych diagnostycznych na stronie Ustawienia diagnostyki i opinii.
+          Jeśli włączysz to ustawienie zasad, Przeglądarka danych diagnostycznych nie będzie włączona na stronie Ustawienia, co uniemożliwi wyświetlanie w niej danych diagnostycznych zebranych przez firmę Microsoft na urządzeniu.  
+          Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, Przeglądarka danych diagnostycznych będzie włączona na stronie Ustawienia.
+      </string>
+
+      <string id="ConfigureMicrosoft365UploadEndpoint">Konfiguruj punkt końcowy przekazywania danych diagnostycznych dla programu Desktop Analytics</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
+          Ta zasada ustawia punkt końcowy przekazywania danych diagnostycznych tego urządzenia w ramach programu Desktop Analytics.
+          Jeśli Twoja organizacja uczestniczy w tym programie i zwrócono się do niej o skonfigurowanie niestandardowego punktu końcowego przekazywania, użyj tego ustawienia w celu zdefiniowania punktu końcowego.
+          Wartość tego ustawienia zostanie dostarczona przez firmę Microsoft w ramach procesu dołączania do tego programu. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Zezwalaj na przetwarzanie w rozwiązaniu Update Compliance</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+To ustawienie zasad w połączeniu z ustawieniem Zezwalaj na telemetrię i Konfiguruj identyfikator komercyjny umożliwia organizacjom skonfigurowanie urządzenia tak, aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zbieranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
+Aby włączyć to zachowanie:
+    1. Włącz to ustawienie zasad.
+    2. Dołącz konto Azure Active Directory do urządzenia
+    3. Ustaw dla parametru Zezwalaj na telemetrię wartość 1 - wymaganą lub wyższą
+    4. Ustaw ustawienie Konfiguruj identyfikator komercyjny dla obszaru roboczego Update Compliance
+
+Po skonfigurowaniu tych zasad dane diagnostyczne systemu Windows zebrane z urządzenia będą podlegać zobowiązaniom procesora firmy Microsoft.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, urządzenia nie będą wyświetlane w Update Compliance.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Zezwalaj na przetwarzanie w usłudze Desktop Analytics</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+To ustawienie zasad w połączeniu z ustawieniem Zezwalaj na telemetrię i Konfiguruj identyfikator komercyjny umożliwia organizacjom skonfigurowanie urządzenia tak, aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zbieranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
+Aby włączyć to zachowanie:
+    1. Włącz to ustawienie zasad.
+    2. Dołącz konto Azure Active Directory do urządzenia
+    3. Ustaw dla parametru Zezwalaj na telemetrię wartość 1 - wymaganą lub wyższą
+    4. Ustaw ustawienie Konfiguruj identyfikator komercyjny dla obszaru roboczego Desktop Analytics
+
+Po skonfigurowaniu tych zasad dane diagnostyczne systemu Windows zebrane z urządzenia będą podlegać zobowiązaniom procesora firmy Microsoft.
+To ustawienie nie ma wpływu na urządzenia, chyba że są one prawidłowo zarejestrowane w programie Desktop Analytics. Jeśli to ustawienie zasad zostanie wyłączone urządzenia nie będą wyświetlane w Update Compliance.
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Zezwalaj na przetwarzanie chmury WUfB</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+To ustawienie zasad umożliwia skonfigurowanie urządzenia dołączonego do Azure Active Directory, tak aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zbieranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
+Aby włączyć to zachowanie:
+    1. Włącz to ustawienie zasad.
+    2. Dołącz konto Azure Active Directory do urządzenia
+    3. Ustaw dla parametru Zezwalaj na telemetrię wartość 1 - wymaganą lub wyższą
+
+Po skonfigurowaniu tych zasad dane diagnostyczne systemu Windows zebrane z urządzenia będą podlegać zobowiązaniom procesora firmy Microsoft.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, urządzenia zarejestrowane w usłudze wdrażania Windows Update dla firm nie będą mogły korzystać z niektórych funkcji usługi wdrażania.
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Zezwalaj na komercyjny potok danych</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+Element AllowCommercialDataPipeline konfiguruje urządzenie dołączone do Azure Active Directory, tak aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zebranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
+Aby włączyć to zachowanie:
+    1. Włącz to ustawienie zasad.
+    2. Dołącz konto Azure Active Directory do urządzenia
+
+Dane diagnostyczne systemu Windows są zbierane, gdy ustawienie zasad Zezwalaj na telemetrię ma wartość 1  - wymaganą lub wyższą. Skonfigurowanie tego ustawienia nie powoduje zmiany poziomu kolekcji danych diagnostycznych systemu Windows dla urządzenia
+Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, firma Microsoft będzie kontrolerem danych diagnostycznych systemu Windows zbieranych z urządzenia i przetwarzanych zgodnie z zasadami zachowania poufności informacji firmy Microsoft pod adresem https://go.microsoft.com/fwlink/?LinkId=521839, chyba że zostaną włączone zasady, takie jak "Zezwalaj na przetwarzanie Update Compliance" lub "Zezwalaj na przetwarzanie Desktop Analytics".
+Zobacz dokumentację pod adresem https://go.microsoft.com/fwlink/?linkid=2011107, aby uzyskać informacje na temat tych i innych zasad, które sprawią, że firma Microsoft będzie procesorem danych diagnostycznych systemu Windows.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Włącz inspekcję usługi OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">To ustawienie zasad określa, czy system Windows zapisuje próby połączenia się z usługą OneSettings w dzienniku zdarzeń.
+
+Jeśli te zasady zostaną włączone, system Windows będzie rejestrował próby połączenia z usługą OneSettings w kanale dziennika zdarzeń Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, system Windows nie będzie rejestrował prób połączenia z usługą OneSettings w dzienniku zdarzeń.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Wyłącz pobieranie usługi OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">To ustawienie zasad określa, czy system Windows ma podejmować próby nawiązania połączenia z usługą usługi onesettings.
+
+Jeśli ta zasada zostanie włączona, system Windows nie będzie podejmować prób nawiązania połączenia z usługą usługi onesettings.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, system Windows będzie okresowo podejmować próbą nawiązania połączenia z usługą usługi onesettings w celu pobrania ustawień konfiguracyjnych.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AllowTelemetry">
+        <dropdownList refId="AllowTelemetry" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="TelemetryProxy">
+        <textBox refId="TelemetryProxyName">
+          <label>Nazwa serwera proxy:</label>
+        </textBox>
+      </presentation>
+      <presentation id="CommercialID">
+        <textBox refId="CommercialIdValue">
+          <label>Identyfikator komercyjny:</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableEnterpriseAuthProxy">
+        <dropdownList refId="DisableEnterpriseAuthProxy" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="LimitEnhancedDiagnosticDataWindowsAnalytics">
+        <dropdownList refId="LimitEnhancedDiagnosticDataWindowsAnalytics" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInSettingsUx">
+        <dropdownList refId="ConfigureTelemetryOptInSettingsUx" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInChangeNotification">
+        <dropdownList refId="ConfigureTelemetryOptInChangeNotification" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureMicrosoft365UploadEndpoint">
+        <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
+          <label>Niestandardowy punkt końcowy przekazywania programu Desktop Analytics:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

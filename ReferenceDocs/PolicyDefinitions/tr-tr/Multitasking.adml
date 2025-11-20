@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Çok görevli</displayName>
+  <description>Windows Çoklu Görev seçeneklerini yönetir</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Çok görevli</string>
+      <string id="MULTITASKINGHELP">Windows Çok görevli seçeneklerini yönetir</string>
+      <string id="BrowserAltTabBlowout">Edge sekmelerinin Alt-Tab'a dahil edilmesini yapılandırın</string>
+      <string id="BrowserAltTabBlowout_Help">Bu ayar, Edge sekmelerinin Alt+Sekme'ye dahil edilmesini kontrol eder.
+
+Bu, tüm sekmeleri, en son 3 veya 5 sekmeyi veya Edge'den hiçbir sekmeyi göstermeyecek şekilde ayarlanabilir.
+
+Bu, "Yalnızca pencereleri aç" olarak ayarlanırsa, tüm özellik devre dışı bırakılır.
+</string>
+      <string id="AltTabFilter_All">Edge’de pencereleri ve tüm sekmeleri açın</string>
+      <string id="AltTabFilter_Five">Microsoft Edge’deki açık pencereleri ve en son açılan 5 sekmeyi gösterir</string>
+      <string id="AltTabFilter_Three">Microsoft Edge’deki açık pencereleri ve en son açılan 3 sekmeyi gösterir</string>
+      <string id="AltTabFilter_None">Yalnızca pencereleri aç</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Alt + Sekme tuşlarına basma</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

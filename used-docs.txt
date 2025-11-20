@@ -1,0 +1,41 @@
+# Documentation files used from SQLServerDocs and WindowsServerDocs
+# Now located under .\ReferenceDocs\
+
+## SQLServerDocs Files:
+./ReferenceDocs/SQLServerDocs/relational-databases/security/networking/tls-1-3.md
+./ReferenceDocs/SQLServerDocs/relational-databases/security/networking/tds-8.md
+./ReferenceDocs/SQLServerDocs/relational-databases/security/networking/connect-with-tls-1-3.md
+./ReferenceDocs/SQLServerDocs/relational-databases/security/networking/connect-with-strict-encryption.md
+./ReferenceDocs/SQLServerDocs/database-engine/configure-windows/certificate-overview.md
+./ReferenceDocs/SQLServerDocs/relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
+./ReferenceDocs/SQLServerDocs/relational-databases/security/encryption/sql-server-encryption.md
+./ReferenceDocs/SQLServerDocs/sql-server/what-s-new-in-sql-server-2022.md
+
+## WindowsServerDocs Files:
+./ReferenceDocs/WindowsServerDocs/administration/server-manager/configure-remote-management-in-server-manager.md
+./ReferenceDocs/WindowsServerDocs/storage/file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
+./ReferenceDocs/WindowsServerDocs/storage/file-server/smb-security.md
+./ReferenceDocs/WindowsServerDocs/storage/file-server/smb-signing.md
+./ReferenceDocs/WindowsServerDocs/storage/file-server/smb-signing-overview.md
+./ReferenceDocs/WindowsServerDocs/security/credentials-protection-and-management/configuring-additional-lsa-protection.md
+./ReferenceDocs/WindowsServerDocs/identity/ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts.md
+./ReferenceDocs/WindowsServerDocs/security/secured-core-server.md
+./ReferenceDocs/WindowsServerDocs/security/configure-secured-core-server.md
+./ReferenceDocs/WindowsServerDocs/security/kernel-mode-hardware-stack-protection.md
+./ReferenceDocs/WindowsServerDocs/security/credentials-protection-and-management/credentials-protection-and-management.md
+./ReferenceDocs/WindowsServerDocs/identity/ad-ds/manage/component-updates/TPM-Key-Attestation.md
+./ReferenceDocs/WindowsServerDocs/remote/remote-desktop-services/remote-desktop-services-certificates.md
+./ReferenceDocs/WindowsServerDocs/security/tls/tls-registry-settings.md
+./ReferenceDocs/WindowsServerDocs/security/tls/manage-tls.md
+./ReferenceDocs/WindowsServerDocs/identity/ad-fs/operations/Manage-SSL-Protocols-in-AD-FS.md
+./ReferenceDocs/WindowsServerDocs/identity/ad-cs/export-certificate-private-key.md
+./ReferenceDocs/WindowsServerDocs/administration/windows-commands/icacls.md
+./ReferenceDocs/WindowsServerDocs/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview.md
+./ReferenceDocs/WindowsServerDocs/get-started/editions-comparison.md
+./ReferenceDocs/WindowsServerDocs/get-started/whats-new-in-windows-server-2022.md
+./ReferenceDocs/WindowsServerDocs/administration/OpenSSH/openssh-overview.md
+./ReferenceDocs/WindowsServerDocs/administration/OpenSSH/openssh-server-configuration.md
+./ReferenceDocs/WindowsServerDocs/administration/OpenSSH/OpenSSH_KeyManagement.md
+./ReferenceDocs/WindowsServerDocs/security/kerberos/ntlm-overview.md
+./ReferenceDocs/WindowsServerDocs/storage/file-server/smb-ntlm-blocking.md
+./ReferenceDocs/WindowsServerDocs/security/windows-authentication/windows-authentication-concepts.md

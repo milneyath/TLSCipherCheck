@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Sem zadejte zobrazovaný název.</displayName>
+  <description>Sem zadejte popis.</description>
+  <resources>
+    <stringTable>
+      <string id="AllowTelemetry">Povolit telemetrii</string>
+      <string id="AllowTelemetry_0">0 – Zabezpečení [jenom zařízení Enterprise]</string>
+      <string id="AllowTelemetry_1">1 – Povinné</string>
+      <string id="AllowTelemetry_2">2 – Rozšířené</string>
+      <string id="AllowTelemetry_3">3 – Volitelné</string>
+      <string id="AllowTelemetry_Explain">Konfigurací tohoto nastavení ve Windows 10 znemožníte koncovým uživatelům, aby vyjádřili výslovný souhlas se shromažďováním telemetrie na vyšší úrovni, než jakou jste nastavili pro organizaci. Toto omezení platí jen pro operační systém Windows a aplikace, které jsou jeho součástí – nevztahuje se na aplikace třetích stran běžící ve Windows 10.
+
+Diagnostická data se dělí do těchto čtyř úrovní:
+  – 0 (Zabezpečení): Informace potřebné k zajištění zabezpečení systémů Windows, Windows Server a System Center, včetně dat o nastavení součásti Propojená uživatelská prostředí a telemetrie, Nástroje pro odstranění škodlivého softwaru a programu Windows Defender.
+  – 1 (Povinné): Základní informace o zařízení včetně dat týkajících se kvality a kompatibility aplikací a dat z úrovně Zabezpečení.
+  – 2 (Rozšířené): Další analytické informace včetně dat o využití a výkonu systémů Windows, Windows Server a System Center, jakož i aplikací, pokročilých dat o spolehlivosti a dat z úrovně Povinné a Zabezpečení.
+  – 3 (Volitelné): Veškerá data potřebná k identifikaci a řešení problémů plus data z úrovně Zabezpečení, Povinné a Rozšířené.
+
+Konfigurací tohoto nastavení se změní možnosti, které jsou uživatelům k dispozici v aplikaci Nastavení, a i v případě, že toto nastavení není zadané, může mít na dostupnost jednotlivých možností vliv nastavení jiných zásad skupiny. Mějte na paměti, že pokud je tato zásada nakonfigurovaná tak, aby povolovala nastavení telemetrie na úrovni Zabezpečení nebo Povinné, koncoví uživatelé nebudou moct vybrat vyšší úroveň.
+      </string>
+
+      <string id="TelemetryProxy">Konfigurovat službu Propojená uživatelská prostředí a telemetrie</string>
+      <string id="TelemetryProxy_Explain">Pomocí tohoto nastavení zásad můžete předávat žádosti služby Propojené uživatelské prostředí a telemetrie na proxy server.
+
+Pokud toto nastavení zásad povolíte, můžete zadat plně kvalifikovaný název domény nebo IP adresu cílového zařízení v síti vaší organizace (a pokud chcete, tak i číslo portu). Připojení bude využívat protokol SSL (Secure Sockets Layer). Pokud bude určený proxy server v chybovém stavu nebo pokud toto nastavení zásad zakážete nebo nenakonfigurujete, budou data služby Propojené uživatelské prostředí a telemetrie odcházet do Microsoftu s využitím výchozí konfigurace proxy serveru.
+
+Formát pro toto nastavení je &lt;server&gt;:&lt;port&gt;. 
+      </string>
+
+      <string id="CommercialId">Konfigurovat komerční ID</string>
+      <string id="CommercialId_Explain">Toto nastavení zásad určuje identifikátor používaný k jednoznačnému přiřazení telemetrických dat tohoto zařízení jako dat patřících k dané organizaci. Pokud se vaše organizace účastní programu, který vyžaduje, aby se toto zařízení identifikovalo jako zařízení patřící k vaší organizaci, pak pomocí tohoto nastavení tuto identifikaci poskytněte. Hodnota pro toto nastavení bude poskytnuta společností Microsoft jako součást procesu nasazování programu.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Microsoft nebude moct používat tento identifikátor k přidružení tohoto počítače a jeho telemetrických dat k vaší organizaci.
+      </string>
+
+      <string id="DisableEnterpriseAuthProxy">Konfigurace použití ověřeného proxy serveru pro službu Propojené uživatelské prostředí a telemetrie</string>
+      <string id="DisableEnterpriseAuthProxy_1">Povolit použití ověřeného proxy serveru</string>
+      <string id="DisableEnterpriseAuthProxy_2">Zakázat použití ověřeného proxy serveru</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">Nastavení této zásady znemožňuje službě Propojené uživatelské prostředí a telemetrie automaticky ve Windows 10 používat ověřený proxy server k odesílání dat zpátky do Microsoftu. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude služba Propojené uživatelské prostředí a telemetrie automaticky používat ověřený proxy server k odesílání dat zpátky do Microsoftu. Při povolení této zásady se službě Propojené uživatelské prostředí a telemetrie znemožní automatické použití ověřeného proxy serveru.</string>
+
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Omezit rozšířená diagnostická data na minimum vyžadované službami Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Povolit kolekci Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Zakázat kolekci Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Nastavení této zásady v kombinaci s nastavením zásady Povolit telemetrii umožňuje organizacím odesílat Microsoftu prostřednictvím služeb Windows Analytics specifickou sadu diagnostických dat pro statistiku IT.
+
+Pokud chcete toto chování povolit, musíte provést dva kroky:
+
+    1. Povolit toto nastavení zásad
+    2. Nastavit možnost Povolit telemetrii na úroveň 2 (Rozšířené)
+
+Toto nastavení nemá vliv na zařízení nakonfigurovaná tak, aby Microsoftu odesílala diagnostická data na úrovni Zabezpečení nebo Povinné. 
+
+Když tyto zásady nakonfigurujete, shromažďování diagnostických dat se omezí na povinná diagnostická data a na události vyžadované v Desktop Analytics. Seznam těchto událostí najdete tady: https://go.microsoft.com/fwlink/?linkid=2116020.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, úroveň diagnostických dat odesílaných do Microsoftu se určí na základě zásady Povolit telemetrii v případě, že je nakonfigurovaná (pokud například v zásadě Povolit telemetrii povolíte rozšířená diagnostická data, ale nenakonfigurujete tuto zásadu, budete Microsoftu odesílat požadované události pro Windows Analytics plus veškerá další diagnostická data odpovídající rozšířené úrovni).
+      </string>
+
+      <string id="AllowDeviceNameInDiagnosticData">Povolit odesílání názvu zařízení v diagnostických datech Windows</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Tato zásada umožňuje odeslání názvu zařízení do Microsoftu jako součást diagnostických dat Windows.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebude se název zařízení odesílat do Microsoftu jako součást diagnostických dat Windows.
+      </string>
+
+      <string id="ConfigureTelemetryOptInSettingsUx">Umožňuje nakonfigurovat uživatelské rozhraní pro nastavení výslovného souhlasu s telemetrií.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Zakázat nastavení výslovného souhlasu s telemetrií</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Povolit nastavení výslovného souhlasu s telemetrií</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Nastavení této zásady určuje, jestli koncový uživatel může v Nastavení změnit úroveň telemetrie.
+
+Pokud tuto zásadu nastavíte na Zakázat nastavení výslovného souhlasu s telemetrií, budou úrovně telemetrie v Nastavení zakázané, což koncovým uživatelům znemožní jejich změny.
+
+Pokud tuto zásadu nenakonfigurujete nebo ji nastavíte na Povolit nastavení výslovného souhlasu s telemetrií, koncoví uživatelé si úroveň telemetrie v Nastavení budou moct změnit.
+
+Poznámka:
+Pokud chcete omezit úroveň diagnostických dat, která bude vaše organizace odesílat do Microsoftu, použijte nastavení zásady Povolit telemetrii.
+      </string>
+
+      <string id="ConfigureTelemetryOptInChangeNotification">Umožňuje nakonfigurovat oznámení o změnách výslovného souhlasu s telemetrií.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Zakázat oznámení o změnách telemetrie</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Povolit oznámení o změnách telemetrie</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
+          Nastavení této zásady určuje, jestli zařízení uživatelům při prvním přihlášení nebo při změnách v Nastavení zobrazí oznámení o úrovni telemetrie. 
+          Pokud tuto zásadu nastavíte na Zakázat oznámení o změnách telemetrie, oznámení o úrovních telemetrie se nebudou zobrazovat.
+          Pokud tuto zásadu nastavíte na Povolit oznámení o změnách telemetrie nebo ji nenakonfigurujete, budou se oznámení o telemetrii při prvním přihlášení a při změnách v Nastavení zobrazovat.
+      </string>
+
+      <string id="DisableDeviceDelete">Zakázat odstraňování diagnostických dat </string>
+      <string id="DisableDeviceDelete_Explain">
+          Nastavení této zásady určuje, jestli bude na stránce Nastavení diagnostiky a zpětné vazby povolené tlačítko Odstranit diagnostická data.
+          Pokud tuto zásadu povolíte, tlačítko Odstranit diagnostická data bude na této stránce nastavení zakázané, což znemožní odstranění diagnostických dat shromážděných Microsoftem na tomto zařízení. 
+          Pokud tuto zásadu zakážete nebo nenakonfigurujete, bude tlačítko Odstranit diagnostická data na stránce nastavení povolené, což uživatelům umožní odstranit všechna diagnostická data shromážděná Microsoftem na tomto zařízení.
+      </string>
+
+      <string id="DisableDiagnosticDataViewer">Zakázat Prohlížeč diagnostických dat </string>
+      <string id="DisableDiagnosticDataViewer_Explain">
+          Nastavení této zásady určuje, jestli budou uživatelé moct povolit a spustit Prohlížeč diagnostických dat na stránce Nastavení diagnostiky a zpětné vazby.
+          Pokud tuto zásadu povolíte, Prohlížeč diagnostických dat nebude na této stránce nastavení povolený, takže nebude zobrazovat diagnostická data shromážděná Microsoftem na tomto zařízení.  
+          Pokud tuto zásadu zakážete nebo nenakonfigurujete, bude Prohlížeč diagnostických dat na stránce nastavení povolený.
+      </string>
+
+      <string id="ConfigureMicrosoft365UploadEndpoint">Nakonfigurovat koncový bod pro nahrávání diagnostických dat do Desktop Analytics</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
+          Tato zásada nastaví koncový bod pro nahrávání diagnostických dat tohoto zařízení v rámci Desktop Analytics.
+          Pokud se vaše organizace tohoto programu účastní a obdržela pokyny, aby nakonfigurovala vlastní koncový bod nahrávání, použijte toto nastavení a definujte koncový bod.
+          Hodnotu tohoto nastavení získáte od Microsoftu v rámci procesu registrace do programu. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Povolit zpracování službou Update Compliance</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+Toto nastavení zásad v kombinaci s nastavením Povolit telemetrii a Konfigurovat komerční ID umožňuje organizacím konfigurovat zařízení tak, aby byl Microsoft zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
+Pokud chcete takové chování povolit:
+    1. Povolte toto nastavení zásad.
+    2. Připojte účet Azure Active Directory k zařízení
+    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší.
+    4. Nastavte nastavení Konfigurovat komerční ID pro pracovní prostor Update Compliance.
+
+Pokud jsou tyto zásady nakonfigurované, budou diagnostická data systému Windows získaná ze zařízení podléhat závazkům zpracovatele (Microsoftu).
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení se v Update Compliance nezobrazí.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Povolit zpracování službou Desktop Analytics</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+Toto nastavení zásad v kombinaci s nastavením Povolit telemetrii a Konfigurovat komerční ID umožňuje organizacím konfigurovat zařízení tak, aby byl Microsoft zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
+Pokud chcete takové chování povolit:
+    1. Povolte toto nastavení zásad.
+    2. Připojte účet Azure Active Directory k zařízení
+    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší.
+    4. Nastavte nastavení Konfigurovat komerční ID pro pracovní prostor Desktop Analytics.
+
+Pokud jsou tyto zásady nakonfigurované, budou diagnostická data systému Windows získaná ze zařízení podléhat závazkům zpracovatele (Microsoftu).
+Toto nastavené nemá žádný efekt na zařízení, pokud nejsou řádně přihlášená ke službě Desktop Analytics. Pokud toto nastavení zásad zakážete, zařízení se v Desktop Analytics nezobrazí.
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Povolit zpracování WUfB cloudu</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+Toto nastavení zásad nakonfiguruje zařízení připojené k Azure Active Directory tak, aby byl Microsoft zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
+Pokud chcete takové chování povolit:
+    1. Povolte toto nastavení zásad.
+    2. Připojte účet Azure Active Directory k zařízení
+    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší.
+
+Pokud jsou tyto zásady nakonfigurované, budou diagnostická data systému Windows získaná ze zařízení podléhat závazkům zpracovatele (Microsoftu).
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení přihlášená ke službě nasazení Windows Update pro firmy nebudou moct využívat některé funkce služby nasazení.
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Povolit kanál obchodních dat</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+AllowCommercialDataPipeline nakonfiguruje zařízení připojené k Azure Active Directory tak, aby Microsoft byl zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
+Pokud chcete takové chování povolit:
+    1. Povolte toto nastavení zásad.
+    2. Připojte k zařízení účet Azure Active Directory.
+
+Diagnostická data systému Windows se shromažďují, pokud je nastavení zásad Povolit telemetrii nastaveno na hodnotu 1 - Povinné nebo vyšší. Konfigurace tohoto nastavení nemění úroveň sběru diagnostických dat systému Windows nastavenou pro zařízení.
+Pokud toto nastavení zakážete nebo nenakonfigurujete, Microsoft bude správcem diagnostických dat Windows shromážděných ze zařízení a bude je zpracovávat v souladu s prohlášením společnosti Microsoft o zásadách ochrany osobních údajů na adrese https://go.microsoft.com/fwlink/?LinkId=521839, pokud nepovolíte zásady, jako je Povolit zpracování Update Compliance nebo Povolit zpracování Desktop Analytics.
+Informace o této a dalších zásadách, které budou mít za následek, že Microsoft bude zpracovatelem diagnostických dat Windows, najdete v dokumentaci na adrese https://go.microsoft.com/fwlink/?linkid=2011107.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Povolit auditování služby OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">Toto nastavení zásady určuje, jestli bude systém Windows zaznamenávat pokusy o připojení ke službě OneSettings do protokolu událostí.
+
+Pokud tuto zásadu povolíte, bude systém Windows zaznamenávat pokusy o připojení ke službě OneSettings do kanálu Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Pokud toto nastavení zásady zakážete nebo nenakonfigurujete, nebude systém Windows zaznamenávat pokusy o připojení ke službě OneSettings do protokolu událostí.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Zakázat stahování ze služby OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">Toto nastavení zásad určuje, jestli se systém Windows může pokusit o připojení k službě OneSettings.
+
+Pokud tuto zásadu povolíte, systém Windows se nebude pokoušet o připojení k službě OneSettings.
+
+Pokud nastavení této zásady zakážete nebo nenakonfigurujete, systém Windows se bude pravidelně pokoušet o připojení k službě OneSettings, aby mohl stáhnout nastavení konfigurace.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AllowTelemetry">
+        <dropdownList refId="AllowTelemetry" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="TelemetryProxy">
+        <textBox refId="TelemetryProxyName">
+          <label>Název serveru proxy:</label>
+        </textBox>
+      </presentation>
+      <presentation id="CommercialID">
+        <textBox refId="CommercialIdValue">
+          <label>Komerční ID:</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableEnterpriseAuthProxy">
+        <dropdownList refId="DisableEnterpriseAuthProxy" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="LimitEnhancedDiagnosticDataWindowsAnalytics">
+        <dropdownList refId="LimitEnhancedDiagnosticDataWindowsAnalytics" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInSettingsUx">
+        <dropdownList refId="ConfigureTelemetryOptInSettingsUx" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInChangeNotification">
+        <dropdownList refId="ConfigureTelemetryOptInChangeNotification" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureMicrosoft365UploadEndpoint">
+        <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
+          <label>Vlastní koncový bod pro nahrávání do Desktop Analytics:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>请在此处输入显示名称</displayName>
+  <description>请在此处输入描述</description>
+  <resources>
+    <stringTable>
+      <string id="AllowTelemetry">允许遥测</string>
+      <string id="AllowTelemetry_0">0 - 安全性 [仅企业]</string>
+      <string id="AllowTelemetry_1">1 - 必需</string>
+      <string id="AllowTelemetry_2">2 - 增强</string>
+      <string id="AllowTelemetry_3">3 - 可选</string>
+      <string id="AllowTelemetry_Explain">通过在 Windows 10 中配置此设置，最终用户将无法选择使用比你为组织设置的级别更高的遥测收集级别。此限制仅适用于 Windows 操作系统和 Windows 附带的应用，但不适用于在 Windows 10 上运行的第三方应用。
+
+诊断数据分为四个级别，如下所示:
+  - 0 (安全)。保持 Windows、Windows Server 和 System Center 安全所需的信息，包括有关互联用户体验和遥测组件设置、恶意软件删除工具和 Windows Defender 的数据。
+  - 1 (必需)。基本设备信息，包括: 质量相关数据、应用兼容性以及来自安全级别的数据。
+  - 2 (增强)。其他信息，包括: Windows、Windows Server、System Center 和应用的使用方式、它们的执行方式、高级可靠性数据以及来自基本和安全级别的数据。
+  - 3 (可选)。识别问题和解决问题所需的所有数据，以及来自“安全”、“必需”和“增强”级别的数据。
+
+“设置”应用中用户可用的选项可通过配置此设置进行更改，即使未设置，也可能受到其他组策略设置的影响。请注意，如果将此策略配置为允许遥测设置为“安全”或“必需”，则最终用户将无法选择更高的级别。
+      </string>
+
+      <string id="TelemetryProxy">配置互连用户体验和遥测</string>
+      <string id="TelemetryProxy_Explain">使用此策略设置可将连接用户体验和遥测请求转发到代理服务器。
+
+如果启用此策略设置，则可以指定组织网络中目标设备的 FQDN 或 IP 地址(如果需要，还可以选择性地指定端口号)。将通过安全套接字层(SSL)连接来建立连接。如果指定的代理发生故障或者禁用或未配置此策略设置，则会使用默认代理配置将连接用户体验和遥测数据发送到 Microsoft。
+
+此设置的格式为&lt;server&gt;:&lt;port&gt; 
+      </string>
+
+      <string id="CommercialId">配置商用 ID</string>
+      <string id="CommercialId_Explain">此策略设置所定义的标识符用于通过唯一方式将该设备的遥测数据进行关联，使之属于给定的组织。如果你的组织参加的计划要求将该设备标识为属于你的组织，则可使用此设置来提供该标识。在加入该计划时，Microsoft 将提供此设置的值。
+
+如果禁用或未配置此策略设置，则 Microsoft 将无法使用该标识符将此计算机及其遥测数据与你的组织关联起来。
+      </string>
+
+      <string id="DisableEnterpriseAuthProxy">为“已连接的用户体验和遥测”服务进行经验证的代理使用配置</string>
+      <string id="DisableEnterpriseAuthProxy_1">允许使用经验证的代理</string>
+      <string id="DisableEnterpriseAuthProxy_2">禁止使用经验证的代理</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">此策略设置阻止“已连接的用户体验和遥测”服务在 Windows 10 上自动使用经验证的代理将数据发送回 Microsoft。如果禁用或未配置此策略设置，“已连接的用户体验和遥测”服务将自动使用经验证的代理将数据发送回 Microsoft。启用此策略将阻止“已连接的用户体验和遥测”服务自动使用经验证的代理。</string>
+
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">将增强诊断数据限制为 Windows 分析所需的最低水平</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">启用 Windows 分析集合</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">禁用 Windows 分析集合</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">此策略设置与“允许遥测”策略设置一起，可以让组织通过 Windows 分析服务向 Microsoft 发送一组特定的诊断数据以获得 IT 见解。
+
+要启用此行为，必须完成两个步骤: 
+
+    1. 启用此策略设置
+    2. 将“允许遥测”设置为级别 2 (增强)
+
+此设置对配置为将安全性或必需的诊断数据发送给 Microsoft 的设备无效。
+
+配置这些策略后，诊断数据收集将仅限于所需的诊断数据和 Desktop Analytics 所需的事件。可以在https://go.microsoft.com/fwlink/?linkid=2116020上查看这些事件。
+
+如果禁用或未配置此策略设置，则发送给 Microsoft 的诊断数据的级别由“允许遥测”策略设置（如果已配置）决定（例如，如果通过“允许遥测”策略设置启用了增强的诊断数据，但是如果没有配置此策略设置，则将 Windows Analytics 的必需事件以及所有其他增强级别的诊断数据发送给 Microsoft）。
+
+
+      </string>
+
+      <string id="AllowDeviceNameInDiagnosticData">允许发送 Windows 诊断数据中的设备名称</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">该策略允许将设备名称作为 Windows 诊断数据的一部分发送给 Microsoft。
+
+如果你禁用或未配置此策略设置，那么该设备名称不会作为 Windows 诊断数据的一部分发送到 Microsoft。
+      </string>
+
+      <string id="ConfigureTelemetryOptInSettingsUx">配置遥测选择加入设置用户界面。</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">禁用遥测选择加入设置</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">启用遥测选择加入设置</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">此策略设置用于确定最终用户是否可以在“设置”中更改遥测级别。
+
+如果将此策略设置设置为“禁用遥测选择加入设置”，则遥测级别将在“设置”中禁用，并阻止最终用户进行更改。
+
+如果未配置此策略设置，或将其设置为“启用遥测选择加入设置”，则最终用户可以在“设置”应用中更改设备遥测级别。
+
+注意:
+若要对你的组织发送到 Microsoft 的诊断数据级别设置限制，请使用“允许遥测”策略设置。
+      </string>
+
+      <string id="ConfigureTelemetryOptInChangeNotification">配置遥测选择加入更改通知。</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">禁用遥测更改通知</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">启用遥测更改通知</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
+          此策略设置控制设备是在首次登录时还是“设置”发生更改时向用户显示有关遥测级别的通知。
+          如果将此策略设置设为“禁用遥测更改通知”，则遥测级别通知将停止显示。
+          如果将此策略设置设为“启用遥测更改通知”或不配置此策略设置，则在首次登录时以及“设置”发生更改时都会显示遥测通知。
+      </string>
+
+      <string id="DisableDeviceDelete">禁止删除诊断数据 </string>
+      <string id="DisableDeviceDelete_Explain">
+          此策略设置控制“诊断和反馈设置”页面中是否启用了“删除诊断数据”按钮。
+          如果启用此策略设置，则将在“设置”页面中禁用“删除诊断数据”按钮，并阻止删除 Microsoft 从设备中收集的诊断数据。
+          如果你禁用或不配置此策略设置，则将在“设置”页面中启用“删除诊断数据”按钮，从而允许用户擦除 Microsoft 从该设备收集的所有诊断数据。
+      </string>
+
+      <string id="DisableDiagnosticDataViewer">禁用诊断数据查看器。 </string>
+      <string id="DisableDiagnosticDataViewer_Explain">
+          此策略设置控制用户是否能够从“诊断和反馈设置”页面中启用和启动诊断数据查看器。
+          如果启用此策略设置，则将不会在“设置”页面中启用诊断数据查看器，并且将阻止查看器显示 Microsoft 从设备中收集的诊断数据。
+          如果你禁用或不配置此策略设置，则将在“设置”页面中启用诊断数据查看器。
+      </string>
+
+      <string id="ConfigureMicrosoft365UploadEndpoint">配置桌面分析的诊断数据上传终结点</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
+          此策略将此设备诊断数据的上传终结点设置为桌面分析计划的一部分。
+          如果你的组织正在参与该计划，并且已被指示配置自定义上传终结点，则使用此设置来定义该终结点。
+          在加入计划的过程中，此设置的值将由 Microsoft 提供。 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">允许进行更新合规性处理</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+此策略设置与“允许遥测”和“配置商业 ID”结合使用，使组织能够配置设备，以便 Microsoft 是从设备收集的 Windows 诊断数据的处理者，但须遵守 https://go.microsoft.com/fwlink/?linkid=2185086 中的产品条款。
+若要启用此行为，请
+ 1.启用此策略设置
+ 2.将 Azure Active Directory帐户加入设备
+ 3.将“允许遥测”设置为值 1 - 必需，或更高
+ 4.为更新符合性工作区设置“配置商业 ID”设置
+
+配置这些策略时，从设备收集 Windows 诊断数据将受 Microsoft 处理器承诺的约束。
+如果禁用或未配置此策略设置，设备将不会出现在更新符合性中。
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">允许进行桌面分析处理</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+此策略设置与“允许遥测”和“配置商业 ID”结合使用，使组织能够配置设备，以便 Microsoft 是从设备收集的 Windows 诊断数据的处理者，但须遵守 https://go.microsoft.com/fwlink/?linkid=2185086 中的产品条款。
+若要启用此行为，请
+ 1.启用此策略设置
+ 2.将 Azure Active Directory帐户加入设备
+ 3.将“允许遥测”设置为值 1 - 必需，或更高
+ 4.为桌面分析工作区设置“配置商业 ID”设置
+
+配置这些策略时，从设备收集 Windows 诊断数据将受 Microsoft 处理器承诺的约束。
+除非设备在桌面分析中正确注册，否则此设置对设备没有影响。如果禁用此策略设置，设备将不会出现在桌面分析中。
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">允许 WUfB 云处理</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+此策略设置配置已加入 Azure Active Directory 设备，以便 Microsoft 是从设备收集的 Windows 诊断数据的处理者，但须遵守 https://go.microsoft.com/fwlink/?linkid=2185086 的产品条款。
+若要启用此行为：
+ 1.启用此策略设置
+ 2.将 Azure Active Directory 帐户加入设备
+ 3.将“允许遥测”设置为值 1 - 必需或更高
+
+配置这些策略时，从设备收集的 Windows 诊断数据将受 Microsoft 处理器承诺的约束。
+如果禁用或未配置此策略设置，则注册到适用于企业的 Windows 更新部署服务的设备将无法利用某些部署服务功能。
+      </string>
+
+      <string id="AllowCommercialDataPipeline">允许商业数据管道</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+AllowCommercialDataPipeline 配置Azure Active Directory 联接的设备，以便 Microsoft 是从设备收集的 Windows 诊断数据的处理器，遵守https://go.microsoft.com/fwlink/?linkid=2185086 中的产品条款。
+若要启用此行为：
+    1. 启用此策略设置
+    2. 将 Azure Active Directory 帐户加入设备
+
+Windows 诊断数据在“允许遥测”策略设置设置为值 1 -“必需”或更高版本时收集。配置此设置不会更改设备的 Windows 诊断数据收集级别集
+如果禁用或未配置此设置，Microsoft 将成为从设备收集的 Windows 诊断数据的控制者，并根据 Microsoft 在 https://go.microsoft.com/fwlink/?LinkId=521839 的隐私声明进行处理，除非你启用了“允许更新符合性处理”或“允许桌面分析处理”等策略。
+请参阅 https://go.microsoft.com/fwlink/?linkid=2011107 处的文档，了解此策略和其他策略，这些策略将导致 Microsoft 成为 Windows 诊断数据的处理者。
+      </string>
+
+      <string id="EnableOneSettingsAuditing">启用 OneSettings 审核</string>
+      <string id="EnableOneSettingsAuditing_Explain">此策略设置控制 Windows 是否记录连接 OneSettings 服务到 EventLog 的尝试。
+
+如果启用此策略，则 Windows 将记录将从 OneSettings 服务连接到 Microsoft\Windows\Privacy-Auditing\Operational EventLog 通道的尝试。
+
+如果禁用或未配置此策略设置，则 Windows 不会记录将 OneSettings 服务连接到 EventLog 的尝试。
+      </string>
+
+      <string id="DisableOneSettingsDownloads">禁用 OneSettings 下载</string>
+      <string id="DisableOneSettingsDownloads_Explain">此策略设置控制 Windows 是否尝试使用 OneSettings 服务进行连接。
+
+如果启用此策略，则 Windows 不会尝试使用 OneSettings 服务进行连接。
+
+如果禁用或未配置此策略设置，Windows 将定期尝试连接到 OneSettings 服务以下载配置设置。
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AllowTelemetry">
+        <dropdownList refId="AllowTelemetry" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="TelemetryProxy">
+        <textBox refId="TelemetryProxyName">
+          <label>代理服务器名称:</label>
+        </textBox>
+      </presentation>
+      <presentation id="CommercialID">
+        <textBox refId="CommercialIdValue">
+          <label>商用 ID:</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableEnterpriseAuthProxy">
+        <dropdownList refId="DisableEnterpriseAuthProxy" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="LimitEnhancedDiagnosticDataWindowsAnalytics">
+        <dropdownList refId="LimitEnhancedDiagnosticDataWindowsAnalytics" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInSettingsUx">
+        <dropdownList refId="ConfigureTelemetryOptInSettingsUx" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInChangeNotification">
+        <dropdownList refId="ConfigureTelemetryOptInChangeNotification" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureMicrosoft365UploadEndpoint">
+        <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
+          <label>桌面分析自定义上传终结点:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>itt adja meg a megjelenítendő nevet</displayName>
+  <description>itt adja meg a leírást</description>
+  <resources>
+    <stringTable>
+      <string id="AllowTelemetry">Telemetria engedélyezése</string>
+      <string id="AllowTelemetry_0">0 – Biztonság (csak vállalati módban)</string>
+      <string id="AllowTelemetry_1">1 - Szükséges</string>
+      <string id="AllowTelemetry_2">2 – Közepes</string>
+      <string id="AllowTelemetry_3">3 - Opcionális</string>
+      <string id="AllowTelemetry_Explain">Ha konfigurálja ezt a beállítást a Windows 10 rendszeren, a végfelhasználók nem tudnak a szervezethez beállítottnál magasabb szintű használatiadat-gyűjtést bekapcsolni.  Ez a korlátozás csak a Windows operációs rendszerre és a Windows rendszer részét képező alkalmazásokra vonatkozik, a Windows 10 rendszeren futó külső alkalmazásokra nem.
+
+A diagnosztikai adatok négy szintre vannak bontva:
+  – 0 (biztonság). A Windows, a Windows Server és a System Center biztonságának megőrzéséhez szükséges információk, beleértve a Összekapcsolt felhasználói élmények és telemetria összetevő beállításait, a Kártevő-eltávolító eszközt és a Windows Defendert.
+  – 1 (Szükséges). Alapvető eszközadatok, többek között a minőséggel kapcsolatos adatok, az alkalmazások kompatibilitása és a Biztonsági szintről származó adatok.
+  – 2 (Bővített). További elemzések, többek között a következőkkel kapcsolatban: a Windows, a Windows Server, a System Center és az alkalmazások használatának módja, ezek teljesítménye, bővített megbízhatósági adatai, valamint a Szükséges és a Biztonsági szintről származó adatok.
+  – 3 (Opcionális). A problémák azonosításához és megoldásához szükséges összes adat, valamint a Biztonsági, a Szükséges és a Bővített szintről származó adatok.
+
+A Gépház alkalmazásban a felhasználók számára elérhető beállítások köre módosul ennek a beállításnak a konfigurálása esetén, és még akkor is hatással lehetnek rá más csoportházirend-beállítások, ha nincs beállítva. Ne feledje, hogy ha ez a házirend úgy van konfigurálva, hogy a Biztonság vagy az Alap szint telemetriai beállítást engedélyezze, akkor a végfelhasználók nem tudnak magasabb szintet választani.
+      </string>
+
+      <string id="TelemetryProxy">Az Összekapcsolt felhasználói élmények és telemetria szolgáltatás konfigurálása</string>
+      <string id="TelemetryProxy_Explain">Ezzel a házirend-beállítással proxykiszolgálóra továbbíthatja az Összekapcsolt felhasználói élmények és telemetria szolgáltatás kérelmeit.
+
+Ha engedélyezi ezt a házirend-beállítást, megadhatja a munkahelyi vagy intézményi hálózaton működő céloldali eszköz teljes tartománynevét vagy IP-címét (igény esetén a portszámot is). Az eszközök SSL-kapcsolaton keresztül csatlakoznak. Ha a szóban forgó proxy meghibásodik, vagy ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer az alapértelmezett proxybeállításokat használva elküldi a Microsoftnak az Összekapcsolt felhasználói élmények és telemetria szolgáltatás adatait.
+
+A beállítás formátuma &lt;kiszolgálónév&gt;:&lt;portszám&gt;. 
+      </string>
+
+      <string id="CommercialId">A kereskedelmi azonosító konfigurálása</string>
+      <string id="CommercialId_Explain">Ezzel a házirend-beállítással definiálhatja azt az azonosítót, amellyel egyedi módon társíthatja az eszköz telemetriai adatait egy adott munkahelyhez vagy intézményhez. Ha olyan programban vesz részt a munkahely vagy az intézmény, amelyben annak tulajdonaként kell azonosítani az eszközt, ezzel a beállítással elvégezhető a szükséges azonosítás. A beállítás értékét a Microsoft határozza meg a program előkészítésének részeként.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Microsoft nem tudja a munkahelyhez vagy az intézményhez társítani a gépet és annak telemetriai adatait ezzel az azonosítóval.
+      </string>
+
+      <string id="DisableEnterpriseAuthProxy">Hitelesített proxyhasználat konfigurálása az Összekapcsolt felhasználói élmény és telemetria szolgáltatáshoz</string>
+      <string id="DisableEnterpriseAuthProxy_1">Hitelesített proxyhasználat engedélyezése</string>
+      <string id="DisableEnterpriseAuthProxy_2">Hitelesített proxyhasználat letiltása</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">Ezzel a házirend-beállítással megakadályozható, hogy Windows 10-en az Összekapcsolt felhasználói élmény és telemetria szolgáltatás automatikusan egy hitelesített proxyn keresztül küldje vissza az adatokat a Microsoftnak. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az Összekapcsolt felhasználói élmény és telemetria szolgáltatás automatikusan egy hitelesített proxyn keresztül küldi vissza az adatokat a Microsoftnak. Ha engedélyezi a házirendet, az Összekapcsolt felhasználói élmény és telemetria szolgáltatás nem fog tudni hitelesített proxyt használni.</string>
+
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Kibővített diagnosztikai adatok korlátozása a Windows Analytics által megkövetelt minimális szintre</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics-gyűjtemény engedélyezése</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Windows Analytics-gyűjtemény letiltása</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Ez a házirend-beállítás a Telemetria engedélyezése házirend-beállítással együtt lehetővé teszi, hogy a szervezetek meghatározott diagnosztikai adatkészletet küldjenek a Microsoftnak az informatikai adatok elemzéséhez a Windows Analytics-szolgáltatásokon keresztül.
+
+A viselkedés engedélyezéséhez két lépést kell végrehajtania: 
+
+ 1. Engedélyeznie kell ezt a házirend-beállítást.
+    2. A Telemetria engedélyezése beállítást a 2. szintre (Közepes) kell állítania.
+
+Ez a beállítás nincs hatással azokra a számítógépekre, amelyeken be van állítva a Szükséges vagy Biztonság szintű diagnosztikai adatok küldése a Microsoftnak.
+
+ Az említett házirend-beállítások konfigurálásakor a diagnosztikai adatgyűjtés a szükséges diagnosztikai adatok és az Asztali elemzés által igényelt eseményekre korlátozódik. Ezekről az eseményekről itt olvashat: https://go.microsoft.com/fwlink/?linkid=2116020.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a Microsoftnak elküldött diagnosztikai adatok szintjét a Telemetria engedélyezése házirend határozza meg (pl. ha engedélyezi a bővített diagnosztikai adatokat a Telemetria engedélyezése házirend-beállításban, de nem konfigurálja ezt a házirend-beállítást, akkor elküldi a Windows Analytics számára szükséges eseményeket, valamint minden további Bővített szintű diagnosztikai adatot a Microsoftnak).
+      </string>
+
+      <string id="AllowDeviceNameInDiagnosticData">Eszköznév elküldésének engedélyezése a Windows diagnosztikai adatok között</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Ez a házirend lehetővé teszi az eszköznév elküldését a Microsoftnak a Windows diagnosztikai adatok részeként.
+
+Ha letiltja vagy nem konfigurálja a házirend-beállítást, az eszköznév nem lesz elküldve a Microsoftnak a Windows diagnosztikai adatok között.
+      </string>
+
+      <string id="ConfigureTelemetryOptInSettingsUx">Telemetria-jóváhagyási beállítás felhasználói felületének konfigurálása.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Telemetria-jóváhagyási beállítások letiltása</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Telemetria-jóváhagyási beállítások engedélyezése</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Ez a házirend-beállítás azt határozza meg, hogy a végfelhasználók módosíthatják-e a telemetriai szinteket a Gépházban.
+
+Ha ehhez a házirendhez a „Telemetria-jóváhagyási beállítások letiltása” beállítást adja meg, a telemetriaszintek ki lesznek kapcsolva a Gépházban, és a végfelhasználók nem módosíthatják őket.
+
+Ha nem konfigurálja ezt a házirend-beállítást, vagy a „Telemetria-jóváhagyási beállítások engedélyezése” beállítást adja meg, a végfelhasználók módosíthatják az eszköz telemetriai szintjét a Gépház alkalmazásban.
+
+Megjegyzés:
+A szervezet által a Microsoft számára küldött diagnosztikai adatok szintjének korlátozásához használja a „Telemetria engedélyezése” házirend-beállítást.
+      </string>
+
+      <string id="ConfigureTelemetryOptInChangeNotification">Telemetria-jóváhagyás megváltoztatására vonatkozó értesítések konfigurálása.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Telemetria-jóváhagyás megváltoztatására vonatkozó értesítések letiltása</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Telemetria-jóváhagyás megváltoztatására vonatkozó értesítések engedélyezése</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
+          Ezzel a házirend-beállítással szabályozhatja, hogy az eszközön megjelenjenek-e telemetriaszintekkel kapcsolatos értesítések a felhasználók számára a legelső bejelentkezéskor, illetve a Gépházban végzett módosítások esetén. 
+          Ha ezt a házirend-beállítást „Telemetria-jóváhagyás megváltoztatására vonatkozó értesítések letiltása” értékre állítja, akkor megszűnik a telemetriaszintre vonatkozó értesítések megjelenítése.
+          Ha ezt a házirend-beállítást „Telemetria-jóváhagyás megváltoztatására vonatkozó értesítések engedélyezése” értékre állítja, vagy nem konfigurálja, akkor a telemetriával kapcsolatos értesítések megjelennek a legelső bejelentkezés alkalmával, valamint a Gépházban végzett módosítások esetén.
+      </string>
+
+      <string id="DisableDeviceDelete">Diagnosztikai adatok törlésének letiltása </string>
+      <string id="DisableDeviceDelete_Explain">
+          Ezzel a házirend-beállítással szabályozhatja, hogy a Diagnosztikai és visszajelzési beállítások lapon engedélyezve legyen-e a Diagnosztikai adatok törlése gomb.
+          Ha engedélyezi ezt a házirend-beállítást, a Diagnosztikai adatok törlése gomb le lesz tiltva a Beállítások lapon, ami megakadályozza a Microsoft által gyűjtött diagnosztikai adatok törlését az eszközön. 
+          Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Diagnosztikai adatok törlése gomb engedélyezve lesz a Beállítások lapon, ami lehetővé teszi, hogy a felhasználók töröljék a Microsoft által gyűjtött összes diagnosztikai adatot az adott eszközön.
+      </string>
+
+      <string id="DisableDiagnosticDataViewer">A Diagnosztikai adatok megjelenítője alkalmazás letiltása. </string>
+      <string id="DisableDiagnosticDataViewer_Explain">
+          Ezzel a házirend-beállítással szabályozhatja, hogy a felhasználók engedélyezhetik és elindíthatják-e a Diagnosztikai adatok megjelenítője alkalmazást a Diagnosztikai és visszajelzési beállítások lapon.
+          Ha engedélyezi ezt a házirend-beállítást, a Diagnosztikai adatok megjelenítője nem lesz engedélyezve a Beállítások lapon, ami megakadályozza, hogy a megjelenítő megjelenítse a Microsoft által az eszközről gyűjtött diagnosztikai adatokat.  
+          Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Diagnosztikai adatok megjelenítője engedélyezve lesz a Beállítások lapon.
+      </string>
+
+      <string id="ConfigureMicrosoft365UploadEndpoint">A diagnosztikai adatok feltöltési végpontjának konfigurálása az Asztali elemzés szolgáltatáshoz</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
+          Ezzel a házirenddel beállíthatja az eszköz diagnosztikai adatainak feltöltési végpontját az Asztali elemzés program részeként.
+          Ha a szervezet részt vesz a programban, és utasítást kapott az egyéni feltöltési végpont konfigurálására, akkor ezzel a beállítással meghatározhatja ezt a végpontot.
+          A beállítás értékét a Microsoft fogja biztosítani a program előkészítési folyamatában. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Az Update Compliance általi feldolgozás engedélyezése</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+Ez a házirend-beállítás a Telemetria engedélyezése és a Kereskedelmi azonosító konfigurálása beállítással együtt lehetővé teszi, hogy a szervezetek úgy konfigurálják az eszközt, hogy a Microsoft az eszközről gyűjtött Windows diagnosztikai adatok feldolgozója legyen, a https://go.microsoft.com/fwlink/?linkid=2185086 oldalon található termékhasználati feltételek szerin.
+A viselkedés engedélyezése:
+    1. Engedélyezze ezt a házirend-beállítást
+    2. Csatlakoztasson egy Azure Active Directory-fiókot az eszközhöz
+    3. A Telemetria engedélyezése beállítás értékét állítsa az 1 – Kötelező vagy magasabb értékre
+    4. Adja meg az Update Compliance-munkaterület A kereskedelmi azonosító konfigurálása beállítását
+
+Ha konfigurálja ezeket a házirendeket, az eszközről gyűjtott Windows diagnosztikai adatokra a Microsoft feldolgozási kötelezettségvállalásai vonatkoznak.
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az eszközök nem jelennek meg az Update Compliance-ben.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">A Desktop Analytics általi feldolgozás engedélyezése</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+Ez a házirend-beállítás a Telemetria engedélyezése és a Kereskedelmi azonosító konfigurálása beállítással együtt lehetővé teszi, hogy a szervezetek úgy konfigurálják az eszközt, hogy a Microsoft az eszközről gyűjtött Windows diagnosztikai adatok feldolgozója legyen, a https://go.microsoft.com/fwlink/?linkid=2185086 oldalon található termékhasználati feltételek szerin.
+A viselkedés engedélyezése:
+    1. Engedélyezze ezt a házirend-beállítást
+    2. Csatlakoztasson egy Azure Active Directory-fiókot az eszközhöz
+    3. A Telemetria engedélyezése beállítás értékét állítsa az 1 – Kötelező vagy magasabb értékre
+    4. Adja meg a Desktop Analytics-munkaterület A kereskedelmi azonosító konfigurálása beállítását
+
+Ha konfigurálja ezeket a házirendeket, az eszközről gyűjtött Windows diagnosztikai adatokra a Microsoft feldolgozási kötelezettségvállalásai vonatkoznak.
+Ez a beállítás nincs hatással az eszközökre, ha nincsenek megfelelően regisztrálva a Desktop Analyticsben. Ha letiltja ezt a házirend-beállítást, az eszközök nem jelennek meg a Desktop Analyticsben.
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">WUfB Felhőbeli feldolgozás engedélyezése</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+Ez a házirend-beállítás úgy konfigurálja az Azure Active Directory-hoz csatlakoztatott eszközöket, hogy a Microsoft legyen az eszközről gyűjtott adatok feldolgozója, a https://go.microsoft.com/fwlink/?linkid=2185086 oldalon található termékhasználati feltételek szerin.
+A viselkedés engedélyezése:
+    1. Engedélyezze ezt a házirend-beállítást
+    2. Csatlakoztasson egy Azure Active Directory-fiókot az eszközhöz
+    3. A Telemetria engedélyezése beállítás értékét állítsa az 1 – Kötelező vagy magasabb értékre
+
+Ha konfigurálja ezeket a házirendeket, az eszközről gyűjtött Windows diagnosztikai adatokra a Microsoft feldolgozási kötelezettségvállalásai vonatkoznak.
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Windows Update Vállalatoknak üzembe helyezési szolgáltatásban regisztrált eszközök nem tudják kihasználni az üzembe helyezési szolgáltatás egyes funkcióinak előnyeit.
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Kereskedelmi adatfolyamat engedélyezése</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+Az AllowCommercialDataPipeline úgy konfigurálja az Azure Active Directory-hoz csatlakoztatott eszközöket, hogy a Microsoft dolgozza fel az eszközről gyűjtött Windows diagnosztikai adatokat, a https://go.microsoft.com/fwlink/?linkid=2185086 oldalon található termékhasználati feltételek szerint.
+A viselkedés engedélyezése:
+    1. Engedélyezze ezt a házirend-beállítást
+    2. Csatlakoztasson egy Azure Active Directory-fiókot az eszközhöz
+
+A rendszer akkor gyűjt Windows diagnosztikai adatokat, ha a Telemetria engedélyezése házirend-beállítás értéke 1 – Kötelező vagy magasabb. A beállítás konfigurálása nem módosítja az eszközön a Windows diagnosztikai adatok begyűjtéséhez beállított szintet
+Ha letiltja vagy nem konfigurálja ezt a beállítást, a Microsoft vezérli az eszközről gyűjtött windows diagnosztikai adatokat a Microsoft https://go.microsoft.com/fwlink/?LinkId=521839 oldalon található adatvédelmi nyilatkozatának megfelelően, kivéve, ha olyan házirendeket engedélyezett, mint „Az Update Compliance általi feldolgozás engedélyezése” vagy „A Desktop Analytics általi feldolgozás engedélyezése”.
+A https://go.microsoft.com/fwlink/?linkid=2011107 címen található dokumentációban további információt erről és más olyan házirendekről, amelyek hatására a Microsoft lesz a Windows diagnosztikai adatok feldolgozója.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">A Onesettings naplózásának engedélyezése</string>
+      <string id="EnableOneSettingsAuditing_Explain">Ez a házirend-beállítás azt szabályozza, hogy a Windows rögzítse-e a OneSettings szolgáltatáshoz való kapcsolódási kísérleteket az eseménynaplóban.
+
+Ha engedélyezi a házirend-beállítást, a Windows rögzíteni fogja a OneSettings szolgáltatáshoz való kapcsolódási kísérleteket a Microsoft\Windows\Privacy-Auditing\Operational EventLog csatornában.
+
+Ha letiltja vagy nem konfigurálja a házirend-beállítást, akkor a Windows nem fogja rögzíteni a OneSettings szolgáltatáshoz való kapcsolódási kísérleteket az eseménynaplóban.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">A Onesettings-letöltések letiltása</string>
+      <string id="DisableOneSettingsDownloads_Explain">Ez a házirend-beállítás határozza meg, hogy a Windows megkísérel-e csatlakozni a OneSettings szolgáltatáshoz.
+
+Ha engedélyezi a házirend-beállítást, a Windows nem próbál meg csatlakozni a OneSettings szolgáltatáshoz.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Windows időnként megpróbál csatlakozni a OneSettings szolgáltatáshoz a konfigurációs beállítások letöltéséhez.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AllowTelemetry">
+        <dropdownList refId="AllowTelemetry" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="TelemetryProxy">
+        <textBox refId="TelemetryProxyName">
+          <label>Proxykiszolgáló neve:</label>
+        </textBox>
+      </presentation>
+      <presentation id="CommercialID">
+        <textBox refId="CommercialIdValue">
+          <label>Kereskedelmi azonosító:</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableEnterpriseAuthProxy">
+        <dropdownList refId="DisableEnterpriseAuthProxy" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="LimitEnhancedDiagnosticDataWindowsAnalytics">
+        <dropdownList refId="LimitEnhancedDiagnosticDataWindowsAnalytics" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInSettingsUx">
+        <dropdownList refId="ConfigureTelemetryOptInSettingsUx" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryOptInChangeNotification">
+        <dropdownList refId="ConfigureTelemetryOptInChangeNotification" noSort="true" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="ConfigureMicrosoft365UploadEndpoint">
+        <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
+          <label>Asztali elemzés egyéni feltöltési végpontja:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
